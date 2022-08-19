@@ -57,7 +57,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="title-box-d section-t4">
-                                                <h3 class="title-d">معلومات اخرى </h3>
+                                                <h3 class="title-d"> تفاصيل العقار </h3>
                                             </div>
                                         </div>
                                     </div>
@@ -88,28 +88,17 @@
                                             </li>
 
                                             <li class="d-flex justify-content-between">
-                                                <strong> حساب فيسبوك :</strong>
-                                               <a target="blank" href="https://www.facebook.com/{{$real->facebook}}"> <i class="bi bi-facebook" style="color: blue"> </i></a>
+                                                <strong> حساب فيسبوك (الرابط) :</strong>
+                                               <a target="blank" href="{{$real->facebook}}"> <i class="bi bi-facebook" style="color: blue"> </i></a>
                                             </li>
 
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-7 col-lg-7 section-md-t3">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="title-box-d">
-                                            <h3 class="title-d">تفاصيل العقار </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-description">
-                                    <p class="description color-text-a">
-                                        {{$real->description}}
-                                    </p>
+                            <div class="col-md-7 col-lg-7 section-md-t3" style="margin-top: 50px">
 
-                                </div>
+
                                 @if ($real->category->category != "أراضي للبيع" && $real->category->category != "أراضي للايجار")
 
                                 <div class="summary-list  w-50">

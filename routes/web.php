@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\ContactusController as DashboardContactusController;
 use App\Http\Controllers\Dashboard\RealEstateController as DashboardRealEstateController;
 use App\Http\Controllers\Dashboard\UserController;
+use App\Http\Controllers\Front\ContactusController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\RealEstateController;
 use App\Http\Controllers\Front\SearchController;
@@ -43,7 +45,11 @@ Route::prefix('/dashboard')->middleware(['auth','checkUserType'])->group(functio
         Route::get('/realEstate/destroy/{slug}',[DashboardRealEstateController::class,'destroy'])->name('dashboard.reales.destroy');
 
         Route::get('/users',[UserController::class,'index'])->name('dashboard.users');
-        Route::get('/user  /destroy/{id}',[UserController::class,'destroy'])->name('dashboard.users.destroy');
+        Route::get('/user/destroy/{id}',[UserController::class,'destroy'])->name('dashboard.users.destroy');
+
+        Route::get('/messages',[DashboardContactusController::class,'index'])->name('dashboard.messages');
+        Route::get('/messages/destroy/{id}',[DashboardContactusController::class,'destroy'])->name('message.destroy');
+
 
     }
 );
@@ -51,9 +57,9 @@ Route::prefix('/dashboard')->middleware(['auth','checkUserType'])->group(functio
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('عرض-العقار/{slug}',[RealEstateController::class,'show'])->name('real.show');
 Route::get('/الأقسام/{slug}',[HomeController::class,'showReales'])->name('showAllReales');
-
-
 Route::get('البحث/',[SearchController::class,'index'])->name('search');
+Route::get('تواصل-معنا/',[ContactusController::class,'index'])->name('contactus');
+Route::post('تواصل-معنا/',[ContactusController::class,'store'])->name('contactus.store');
 
 
 Route::prefix('/العقارات')->middleware(['auth'])->group(function ()

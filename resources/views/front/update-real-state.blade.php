@@ -53,16 +53,6 @@
 
 
 
-                                        <div class="col-md-12  mb-3">
-                                            <div class="form-group">
-                                                <label for="" class="form-label  text-primary fw-bold"> التفاصيل <span class="fw-bold text-danger">* </span></label>
-                                                <textarea name="description"  class="form-control"  cols="45" rows="8" placeholder="التفاصيل" >{{$real->description}}</textarea>
-                                                @error('description')
-                                                <p class="invalid-feedback d-block"> {{$message}}</p>
-                                                @enderror
-                                            </div>
-                                        </div>
-
 
                                         <div class="col-md-12  mb-3">
                                             <div class="form-group">

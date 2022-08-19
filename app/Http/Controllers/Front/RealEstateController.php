@@ -45,7 +45,6 @@ class RealEstateController extends Controller
       //  dd($request->all());
         $request->validate([
             "title"=>'required',
-            "description"=>"required",
             "category_id"=>"required",
             "city"=>"required",
             "address"=>"required",
@@ -53,7 +52,6 @@ class RealEstateController extends Controller
 
         ],[
             "title.required"=>"هذا الحقل مطلوب",
-            "description.required"=>"هذا الحقل مطلوب",
             "category_id.required"=>"الرجاء اختيار قسم",
             "city.required"=>"هذا الحقل مطلوب",
             "address.required"=>"هذا الحقل مطلوب",
@@ -118,9 +116,10 @@ class RealEstateController extends Controller
 
     public function update(Request $request, $slug)
     {
-     //   dd($request->all());
+     // dd($request->all());
         $real = RealEstate::where('slug',$slug)->first();
         if ($real->user_id != Auth::id()) {
+
             return redirect()->back();
         }
         if($request->hasFile('images')){
@@ -135,22 +134,22 @@ class RealEstateController extends Controller
 
             }
         }
+
         $request->validate([
             "title"=>'required',
-            "description"=>"required",
             "category_id"=>"required",
             "city"=>"required",
             "address"=>"required",
             "phone"=>"required",
         ],[
             "title.required"=>"هذا الحقل مطلوب",
-            "description.required"=>"هذا الحقل مطلوب",
             "category_id.required"=>"الرجاء اختيار قسم",
             "city.required"=>"هذا الحقل مطلوب",
             "address.required"=>"هذا الحقل مطلوب",
             "phone.required"=>"هذا الحقل مطلوب",
 
         ]);
+        //dd($request->all());
         if (!$request->kitchen) {
             $request->merge([
                 'kitchen'=> null,

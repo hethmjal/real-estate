@@ -1,7 +1,7 @@
 @extends('front.partials')
 @section('content')
 @if (session('success'))
-<div class="title-single alert alert-success">{{session('success')}}</div>
+<div class="mt-5 title-single alert alert-success">{{session('success')}}</div>
 @endif
 
     <main id="main">
@@ -9,7 +9,7 @@
         <!-- ======= Intro Single ======= -->
         <section class="intro-single">
             <div class="container">
-                <a href="{{route('real.add')}}" class=" btn btn-success mx-2" style="background: #5393eb ;font-size: 20px" >اضافة عقار جديد</a>
+                <a href="{{route('real.add')}}" style="margin-bottom: 20px; background: #5393eb" class=" rounded-3 mx-2 btn  btn-b-n mx-2" style="background: #5393eb ;font-size: 20px" >اضافة عقار جديد</a>
 
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">

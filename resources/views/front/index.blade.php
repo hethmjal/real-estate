@@ -18,15 +18,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <div class="title-box-d section-t4">
-                            <h3 class="title-d"> اخر العقارات </h3>
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="row">
-
-
-
-
+                            <h3 class="title-d header-title"> اخر العقارات </h3>
                         </div>
                     </div>
                 </div>
@@ -57,13 +49,11 @@
                                         <div class="card-footer-a">
                                             <ul class="card-info d-flex justify-content-around">
                                                 <li>
-                                                    <h4 class="card-info-title">الموقع</h4>
+                                                    <h4 class="card-info-title ">الموقع</h4>
                                                     <span>{{$item->address}} </span>
                                                 </li>
-                                                <li>
-                                                    <h4 class="card-info-title">المساحة</h4>
-                                                    <span>{{$item->space}} متر </span>
-                                                </li>
+                                                <br>
+
 
                                                 <li>
                                                     <h4 class="card-info-title">صاحب العقار</h4>
@@ -139,7 +129,7 @@
                                         <ul class="card-info d-flex justify-content-around">
                                             <li>
                                                 <h4 class="card-info-title">الموقع</h4>
-                                                <span>{{$item->address}} </span>
+                                                <span>{{Str::words($item->address,5)}} </span>
                                             </li>
                                             <li>
                                                 <h4 class="card-info-title">المساحة</h4>

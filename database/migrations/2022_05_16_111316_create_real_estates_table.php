@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('address');
             $table->double('price')->nullable();
             $table->string('currency')->nullable();
-
             $table->string('interface')->nullable();
             $table->string('bedrooms')->nullable();
             $table->string('halls')->nullable();
@@ -36,7 +35,6 @@ return new class extends Migration
             $table->string('kitchen')->nullable();
             $table->string('elevator')->nullable();
             $table->string('car')->nullable();
-
             $table->double('space')->nullable();
             $table->enum('payment_method',['كاش','تقسيط']);
             $table->double('phone');

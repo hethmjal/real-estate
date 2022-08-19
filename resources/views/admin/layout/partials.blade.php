@@ -11,7 +11,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
     <title class="title">عقارات السعودية </title>
-    <link rel="shortcut icon" class="link" href="{{asset('myfront/images/kusoglu-logo.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('front/assets/img/logo.png')}}" type="image/x-icon">
 
 
     <!-- Tell the browser to be responsive to screen width -->
@@ -68,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{route('dashboard')}}" class="brand-link">
+    <a href="{{route('home')}}" class="brand-link">
 
       <span class="brand-text font-weight-light">عقارات السعودية </span>
     </a>
@@ -155,6 +155,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             </ul>
           </li>
+
+          <li class="nav-item has-treeview @if(request()->routeis('dashboard.messages')  ) menu-open @endif   mt-3">
+            <a href="" class="nav-link @if(request()->routeis('dashboard.messages')  ) active @endif ">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                 الرسائل
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('dashboard.messages')}}" class="nav-link @if(request()->routeis('dashboard.messages')) active @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>عرض الرسائل</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

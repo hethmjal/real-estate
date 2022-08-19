@@ -10,8 +10,13 @@
 # General
 --------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Cairo', sans-serif;
     color: #555555;
 }
 
@@ -108,8 +113,9 @@ a:hover {
 }
 
 .text-brand {
+    font-family: 'Cairo', sans-serif;
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
 }
 
@@ -287,7 +293,7 @@ a:hover {
 /*------/ Space Padding /------*/
 
 .section-t8 {
-    padding-top: 8rem;
+    padding-top: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -368,7 +374,7 @@ a:hover {
 
 .title-box-d .title-d {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .title-box-d .title-d:after {
@@ -618,7 +624,7 @@ a:hover {
 }
 
 .btn.btn-b-n {
-    background-color: #2eca6a;
+    background-color: #5393eb;
     color: #ffffff;
     border-radius: 0;
 }
@@ -687,7 +693,7 @@ a:hover {
 
 .navbar-default.navbar-trans .nav-link,
 .navbar-default.navbar-reduce .nav-link {
-    font-size: 1.1rem;
+    font-size: 14px;
     color: #000000;
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -1155,7 +1161,7 @@ a:hover {
 /*------/ Intro Single /------*/
 
 .intro-single {
-    padding: 12rem 0 3rem;
+    padding: 8rem 0 3rem;
 }
 
 @media (max-width: 767px) {
@@ -1174,18 +1180,18 @@ a:hover {
 
 .intro-single .title-single-box .title-single {
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
     .intro-single .title-single-box .title-single {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 }
 
 @media (min-width: 992px) {
     .intro-single .title-single-box .title-single {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -2238,10 +2244,6 @@ footer .credits {
     font-size: 14px;
 }
 
-* {
-    font-family: 'Work Sans', sans-serif;
-}
-
 html,
 body {
     height: 100%;
@@ -2348,4 +2350,26 @@ input[type="radio"]:checked+.page {
     max-width: 100%;
     width: 500px;
     margin: 0 auto;
+}
+
+.header-title {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 465px) {
+    .header-title {
+        margin-top: 50px;
+    }
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: normal;
+    }
 }

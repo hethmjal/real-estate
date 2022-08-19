@@ -44,7 +44,7 @@
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label text-primary fw-bold">العنوان <span class="fw-bold text-danger">* </span> </label>
-                                                <input type="text" name="title" value="{{old('title')}}" class="form-control form-control-lg form-control-a" placeholder=" " required >
+                                                <input type="text" name="title" value="{{old('title')}}" class="form-control form-control form-control-a" placeholder=" " required >
                                                 @error('title')
                                                 <p class="invalid-feedback d-block"> {{$message}}</p>
                                                 @enderror
@@ -67,7 +67,7 @@
                                         <div class="col-md-12  mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">صور العقار </label>
-                                                <input name="images[]"  id="upload_file"  type="file" multiple class="form-control form-control-lg form-control-a"  onchange="preview_image();" >
+                                                <input name="images[]"  id="upload_file"  type="file" multiple class="form-control form-control form-control-a"  onchange="preview_image();" >
                                                 @error('images')
                                                 <p class="invalid-feedback d-block"> {{$message}}</p>
                                                 @enderror
@@ -97,7 +97,7 @@
                                         <div class="col-md-12  mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">المدينة <span class="fw-bold text-danger">* </span></label>
-                                                <input name="city" type="text" value="{{old('city')}}" class="form-control form-control-lg form-control-a" placeholder=" المدينة " >
+                                                <input name="city" type="text" value="{{old('city')}}" class="form-control form-control form-control-a" placeholder=" المدينة " >
                                                 @error('city')
                                                 <p class="invalid-feedback d-block"> {{$message}}</p>
                                                 @enderror
@@ -107,7 +107,7 @@
                                         <div class="col-md-12  mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">عنوان السكن او البيع بالتفصيل <span class="fw-bold text-danger">* </span></label>
-                                                <input name="address" type="text" value="{{old('address')}}" class="form-control form-control-lg form-control-a" placeholder=" العنوان بتفصيل أكبر " >
+                                                <input name="address" type="text" value="{{old('address')}}" class="form-control form-control form-control-a" placeholder=" العنوان بتفصيل أكبر " >
                                                 @error('address')
                                                 <p class="invalid-feedback d-block"> {{$message}}</p>
                                                 @enderror
@@ -119,20 +119,20 @@
                                         <div class="col-md-6 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">السعر </label>
-                                                <input type="number" min="0" name="price" value="{{old('price')}}" class="form-control form-control-lg form-control-a" placeholder="السعر " >
+                                                <input type="number" min="0" name="price" value="{{old('price')}}" class="form-control form-control form-control-a" placeholder="السعر " >
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">العملة </label>
-                                                <input name="currency" type="text" value="{{old('currency')}}" class="form-control form-control-lg form-control-a" placeholder="العملة  " >
+                                                <input name="currency" type="text" value="{{old('currency')}}" class="form-control form-control form-control-a" placeholder="العملة  " >
                                             </div>
                                         </div>
 
                                         <div class="col-md-12  mb-3">
                                             <div class="form-group ">
                                                 <label for="" class="form-label  text-primary fw-bold">  المساحة بالمتر </label>
-                                                <input name="space" type="number" min="1" value="{{old('space')}}" class="form-control form-control-lg form-control-a" placeholder=" المساحة " >
+                                                <input name="space" type="number" min="1" value="{{old('space')}}" class="form-control form-control form-control-a" placeholder=" المساحة " >
 
                                             </div>
                                         </div>
@@ -142,26 +142,26 @@
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">غرف النوم </label>
-                                                <input type="number" min="0" name="bedrooms" value="{{old('bedrooms')}}" class="form-control form-control-lg form-control-a" placeholder=" " >
+                                                <input type="number" min="0" name="bedrooms" value="{{old('bedrooms')}}" class="form-control form-control form-control-a" placeholder=" " >
                                             </div>
                                         </div>
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">الواجهة </label>
-                                                <input name="interface" type="text" value="{{old('interface')}}" class="form-control form-control-lg form-control-a" placeholder="  " >
+                                                <input name="interface" type="text" value="{{old('interface')}}" class="form-control form-control form-control-a" placeholder="  " >
                                             </div>
                                         </div>
 
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">الصالات </label>
-                                                <input type="number" min="0" name="halls" value="{{old('halls')}}" class="form-control form-control-lg form-control-a" placeholder=" " >
+                                                <input type="number" min="0" name="halls" value="{{old('halls')}}" class="form-control form-control form-control-a" placeholder=" " >
                                             </div>
                                         </div>
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">دورات المياه </label>
-                                                <input name="bathrooms" type="number" value="{{old('bathrooms')}}" class="form-control form-control-lg form-control-a" placeholder="  " >
+                                                <input name="bathrooms" type="number" value="{{old('bathrooms')}}" class="form-control form-control form-control-a" placeholder="  " >
                                             </div>
                                         </div>
 
@@ -169,21 +169,21 @@
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">عرض الشارع </label>
-                                                <input name="street_width" type="number" value="{{old('street_width')}}" class="form-control form-control-lg form-control-a" placeholder="  " >
+                                                <input name="street_width" type="number" value="{{old('street_width')}}" class="form-control form-control form-control-a" placeholder="  " >
                                             </div>
                                         </div>
 
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">الدور </label>
-                                                <input type="number" min="0" name="floor" value="{{old('floor')}}" class="form-control form-control-lg form-control-a" placeholder=" " >
+                                                <input type="number" min="0" name="floor" value="{{old('floor')}}" class="form-control form-control form-control-a" placeholder=" " >
                                             </div>
                                         </div>
 
                                         <div class="col-md-3 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">عمر العقار </label>
-                                                <input type="text" min="0" name="age" value="{{old('age')}}" class="form-control form-control-lg form-control-a" placeholder=" " >
+                                                <input type="text" min="0" name="age" value="{{old('age')}}" class="form-control form-control form-control-a" placeholder=" " >
                                             </div>
                                         </div>
 
@@ -224,24 +224,16 @@
                                         <div class="col-md-6 mb-3">
                                             <div class="form-group">
                                                 <label for="" class="form-label  text-primary fw-bold">رقم الهاتف للتواصل <span class="fw-bold text-danger">* </span> </label>
-                                                <input type="tel" name="phone" value="{{old('phone')}}" class="form-control form-control-lg form-control-a" placeholder=" " >
+                                                <input type="tel" name="phone" value="{{old('phone')}}" class="form-control form-control form-control-a" placeholder=" " >
                                                 @error('phone')
                                                 <p class="invalid-feedback d-block"> {{$message}}</p>
                                                 @enderror
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6 mb-3">
-                                            <div class="form-group">
-                                                <label for="" class="form-label  text-primary fw-bold">
-                                 <i class="bi bi-facebook" aria-hidden="true"></i>
-                                                حساب فيسبوك  </label>
-                                                <input name="facebook" type="text" value="{{old('facebook')}}" class="form-control form-control-lg form-control-a" placeholder="  ">
-                                            </div>
-                                        </div>
 
                                         <div class="col-md-12 text-center">
-                                            <input type="submit"  class=" btn btn-success mx-2" style="font-size: 25px" value="اضافة">
+                                            <input type="submit"  class=" btn rounded-3  btn-b-n  mx-2"  value="اضافة">
                                         </div>
                                     </div>
                                 </form>
